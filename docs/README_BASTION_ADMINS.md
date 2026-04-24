@@ -1,4 +1,4 @@
-# Adding up Admin Users to the Bastion Server
+# Adding Admin Users to the Bastion Server
 
 The bastion server is used to install the Infra cluster, and then manage the environment using cli tools. It is accessed using a local account that must be created the bastion server. We have to run through these instructions every time a user must be added. This includes the intial users created after the hardware is provisioned.
 
@@ -55,7 +55,7 @@ If there is a value present, change it to assign a different temporary password 
 
 4. Add Public Keys
  
-Create a file in the admin_public_keys/ directory. The filename must match the intended username. Paste the new user's public key into the file.
+Create a file in the admin_public_keys/ directory. The filename must match the requested username. Paste the new user's public key into the file. You can get the requested username and public key from the access request ticket.
 
 ```bash
 mkdir -p admin_public_keys/
@@ -71,9 +71,11 @@ Run the playbook for each user.
 ansible-playbook playbooks/add-bastion-admin.yaml -e "username=<Target_Username>" --ask-vault-pass
 ```
 
-6. Communicate with the new user.
+6. Contact the new user
 
-Let them know that their account has been created, how to connect, and the next steps that they should take (i.e. testing the connection and changing their temporary password). The remaining steps document what they should do.
+You can get the user's preferred contact information from the access request ticket. Let the new know that their account has been created, how to connect, their temporary sudo password, and the next steps that they should take (i.e. testing the connection and changing their temporary password). The remaining steps document what they should do.
+
+**Note:** At this time, Slack and Email are not approved mediums to transmit temporary passwords for this environment. Giving them the password over the phone is allowed.
 
 6. Confirm Access
 
