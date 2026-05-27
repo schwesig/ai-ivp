@@ -8,7 +8,7 @@ spec:
     namespace: openshift-gitops
     server: https://kubernetes.default.svc
   source:
-    path: autoshiftv2/autoshift
+    path: autoshift
     repoURL: https://github.com/CCI-MOC/ai-ivp.git
     targetRevision: main
     helm:
