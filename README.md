@@ -8,18 +8,33 @@ Infrastructure as code is included to deploy the pattern in a repeatable fashion
 
 ## Deployment
 
+These diagrams show the components of the system and how they are deployed. Active architectural discussions are considering two options.
+
 ## Option 1 - HCP
+
+This option uses OpenShift Hosted Control Planes.
 
 ![Logical Deployment Diagram](/diagrams/architecture-diagrams-HCP_Logical_Deployment_Diagram.drawio.png)
 
 ## Option 2 - No HCP
 
+This option does not use Hosted Control Planes. Each cluster is deployed to separate physical hardware with its own control plane.
+
 ![Logical Deployment Diagram](/diagrams/architecture-diagrams-Non-HCP_Logical_Deployment_Diagram.drawio.png)
 
 ## Networking
 
+This network digram shows how clusters and users connect.
+
 ![Logical Network Diagram](/diagrams/architecture-diagrams-HCP_Logical_Network_Diagram.drawio.png)
 
+## Automation
+
+This solution uses AutoshiftV2 for infrastructure as code style automation.
+
+See the [forked Autoshift documentation](/README_AUTOSHIFT.md) for details.
+
+This repository includes code adapted from the [open source AutoshiftV2 project](https://github.com/auto-shift/autoshiftv2/).
 
 # Installation
 
