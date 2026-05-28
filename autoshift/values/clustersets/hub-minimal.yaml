@@ -42,3 +42,7 @@ hubClusterSets:
       acm-channel: release-2.16
       acm-source: redhat-operators
       acm-source-namespace: openshift-marketplace
+
+      ### Quay
+      quay: 'true'
+      quay-subscription-name: quay-operator
