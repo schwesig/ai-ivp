@@ -23,7 +23,7 @@ metadata:
   namespace: keycloak-operator
 spec:
   # The community Keycloak operator or 'rhsso-operator' depending on your cluster's catalog
-  name: keycloak-operator 
+  name: rhsso-operator 
   channel: stable
   source: redhat-operators # swap to 'redhat-operators' if using official RHSSO/Keycloak product builds
   sourceNamespace: openshift-marketplace
