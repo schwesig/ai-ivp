@@ -14,7 +14,7 @@ spec:
     helm:
       valueFiles:
         - values/global.yaml
-        - values/clustersets/hub.yaml
+        - values/clustersets/hub-minimal.yaml
         - values/clustersets/managed.yaml
       values: |-
         autoshiftGitRepo: https://github.com/CCI-MOC/ai-ivp

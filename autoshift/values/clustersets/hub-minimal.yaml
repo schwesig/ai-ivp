@@ -18,7 +18,7 @@
 
 # Minimum Hub Cluster Configuration
 hubClusterSets:
-  hub-minimal:
+  hub:
     labels:
       # Required: OpenShift version for image mirroring and compatibility
       openshift-version: '4.21'
