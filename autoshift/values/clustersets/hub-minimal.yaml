@@ -64,6 +64,14 @@ hubClusterSets:
       compliance-source: redhat-operators
       compliance-source-namespace: openshift-marketplace
 
+      ### Local Storage Operator
+      local-storage: 'true'
+      local-storage-subscription-name: local-storage-operator
+      local-storage-channel: stable
+      local-storage-source: redhat-operators
+      local-storage-source-namespace: openshift-marketplace
+      local-storage-channel: stable
+
 
 
 
