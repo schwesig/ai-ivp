@@ -117,10 +117,10 @@ spec:
                   issuerRef:
                     name: {{ .Values.certManager.issuer.name }}
                     kind: ClusterIssuer
-                  commonName: {{ .Values.certManager.certificate.commonName }}
+                  commonName: "{{ .Values.certManager.certificate.commonName }}"
                   dnsNames:
                     {{- range .Values.certManager.certificate.dnsNames }}
-                    - {{ . }} # <-- Loops through array from values.yaml
+                    - "{{ . }}" # <-- Loops through array from values.yaml
                     {{- end }}
             # Item 3: Updating the default IngressContoller
             - complianceType: musthave
@@ -146,11 +146,11 @@ spec:
                       mappingMethod: claim
                       type: GitHub
                       github:
-                        clientID: {{ .Values.certManager.github-OAuth.clientID }}
+                        clientID: {{ .Values.certManager.githubOAuth.clientID }}
                         clientSecret:
-                          name: {{ .Values.certManager.github-OAuth.client-secret }}
+                          name: {{ .Values.certManager.githubOAuth.clientSecret }}
                         teams:
-                          {{- range .Values.certManager.github-OAuth.teams }}
+                          {{- range .Values.certManager.githubOAuth.teams }}
                           - {{ . }} # <-- Loops through array from values.yaml
                           {{- end }}
 ---         

@@ -24,6 +24,11 @@ certManager:
     commonName: "*.apps.infra.ocp.massopen.cloud"
     dnsNames:
       - "*.apps.infra.ocp.massopen.cloud"
+  githubOAuth:
+    clientID: Ov23livwF4cStPZ9AjXD
+    clientSecret: github-client-secret
+    teams:
+      - CCI-MOC/ai-ivp         
 
 # hubClusterSets:
 #   hub:
