@@ -40,13 +40,21 @@ This OpenShift resource contains basic definitions for configuring the autoshift
  Until a secret management solution can be finalized, the following secrets will need to be manually created to allow this configuration to function:
 
 *For Github IDP*
+```bash
 oc create secret generic github-client-secret --from-literal=clientSecret=<YOUR_GITHUB_CLIENT_SECRET> -n openshift-config
+```
 
 After someone logs in their username will be automatically created. It will be the same as their github username. From there give them correct role for acces, ie for Cluster-Admin running
+```bash
 oc adm policy add-cluster-role-to-user cluster-admin <your-github-username>
+```
 
 *For HTTPS*
+```bash
 oc create secret generic aws-route53-credentials --from-literal=secret-access-key="YOUR_AWS_SECRET_ACCESS_KEY" -n cert-manager
+```
 
 *For Portworx*
+```bash
 oc create secret generic px-pure-secret --from-file=pure.json=<file path> --namespace portworx
+```
