@@ -31,6 +31,12 @@ This OpenShift resource contains basic definitions for configuring the autoshift
 
  `templates/policy-local-volume-set.yaml` - Line 23-52 defines the LocalVolumeSet object that allows the operator to discover disks.
 
+ ### nmstate
+
+ `Values.yaml` - Lines 10-18 contain the basic configuration for the storage vlan NNCP for the infra cluster
+
+ `/templates/policy-nmstate-nodenetworkconfigurationpolicy.yaml` - Lines 101-102 add the auto-gateway and auto-route configuration to the NNCP based on the values passed in from Values.yaml
+
  #### openshift-compliance-operator
 
  `templates/policy-nist-scan.yaml` - This template replaces the default STIG template with a configuration to enable NIST 800 based scanning. Additional scans can be added/removed under the profiles definitions in lines 103-113.
