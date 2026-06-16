@@ -12,13 +12,13 @@ Requirements
 
 The openshift-install-fips binary needs to be installed and available in the user $PATH.
 
-Download the binary as detailed in https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/installation_overview/installing-fips and copy it to /usr/local/bin.
+Download the binary as detailed in https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/installation_overview/installing-fips and copy it to `/usr/local/bin`.
 
 
 Role Variables
 --------------
 
-Variables for the cluster configuration are contained in vars/main.yaml. The cluster_name variable determines the name of the installation directories.
+Variables for the cluster configuration are contained in `vars/main.yaml`. The cluster_name variable determines the name of the installation directories.
 
 Dependencies
 ------------
@@ -30,16 +30,20 @@ Example Playbook
 
 The playbook create_agent_iso.yaml that exists in this repo calls the role and creates the installation directory, backup directory, and disk image in accordance with the configurations defined in the variables and templates.
 
+```yaml
 - name: Generate OpenShift Agent Installer Ignition Files
   hosts: localhost
   connection: local
 
   roles:
     - create_agent_iso
+```
 
 To execute this playbook, optionally defining cluster_name as an extra variable to define the name of the installation directory, run
 
+```bash
 ansible-playbook create_agent_iso.yaml -e "cluster_name=NAME"
+```
 
 License
 -------
