@@ -9,6 +9,7 @@ portworx:
   source: certified-operators
   sourceNamespace: openshift-marketplace
   operatorGroupName: portworx-operator-group
+  portworx-version: portworx-certified.v26.2.1
   targetNamespaces: # Optional: specify target namespaces for namespace-scoped operators
      - portworx
   
