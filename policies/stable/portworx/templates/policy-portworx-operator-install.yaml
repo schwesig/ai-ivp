@@ -166,12 +166,12 @@ spec:
                        - key: kubernetes.io/metadata.name
                          operator: NotIn
                          values: [portworx]
-                   egress:
-                   - name: deny-pure-api
-                     action: Deny
-                     to:
-                       - networks:
-                           - "10.3.11.50/32"
+                 egress:
+                 - name: deny-pure-api
+                   action: Deny
+                   to:
+                     - networks:
+                         - "10.3.11.50/32"
 ---
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
